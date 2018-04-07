@@ -17,5 +17,6 @@ public class Accounts {
 	public void addAccount(Account account)
 	{
 	//class adds new account to list of existing accounts
+		accounts.add(account);
 	}
 }

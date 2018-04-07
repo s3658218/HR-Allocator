@@ -10,6 +10,10 @@ public class User_Interface{
 	public Schedual schedual;//schedual class
 	public Logs logs;//log of all past reports
 	
+	public User_Interface() {
+		StartUp();
+	}
+	
 	public void ShowSchedual(Schedual schedual) {
 		//formats schedual into readable data
 	}
@@ -35,7 +39,13 @@ public class User_Interface{
 	}
 	public void StartUp() {
 		//for first time initialisation 
-		//create classes esential to system running
+		accounts = new Accounts();
+		requestHandler = new RequestHandler();
+		schedual = new Schedual();
+		logs = new Logs();
 	}
-	
+	//utility methods
+	private void AddAccount(Account account) {
+		accounts.addAccount(account);//adds account to the list
+	}
 }
